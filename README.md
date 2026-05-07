@@ -2,7 +2,7 @@
 
 A TypeScript API client for [HiggsField.ai](https://higgsfield.ai).
 
-Unofficial SDK for scripts and integrations against HiggsField’s multi-service APIs (Clerk auth, multi-host routing, generation/job helpers). See [`docs/repository-assessment.md`](docs/repository-assessment.md) for a concise technical overview.
+Unofficial SDK for scripts and integrations against HiggsField’s multi-service APIs (Clerk auth, multi-host routing, generation/job helpers). See [`docs/repo-overview.md`](docs/repo-overview.md) for a concise technical overview.
 
 ## Install
 
