@@ -1,0 +1,67 @@
+{
+  "name": "higgsfield-api-client",
+  "version": "0.1.0",
+  "description": "TypeScript API client for HiggsField.ai",
+  "author": {
+    "name": "John Anthony",
+    "url": "https://github.com/anthonyjohn17"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthonyjohn17/higgsfield-api-client.git"
+  },
+  "homepage": "https://github.com/anthonyjohn17/higgsfield-api-client#readme",
+  "bugs": {
+    "url": "https://github.com/anthonyjohn17/higgsfield-api-client/issues"
+  },
+  "keywords": [
+    "higgsfield",
+    "higgsfield-ai",
+    "api-client",
+    "typescript",
+    "clerk"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@10.8.1",
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "pnpm run typecheck && pnpm run lint && pnpm run build",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "example": "npx tsx examples/usage.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.10",
+    "@types/node": "^25.5.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}
